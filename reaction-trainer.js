@@ -1,0 +1,3 @@
+function reactionTrainer() {
+  let situations = [{}];
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>משחק זיהוי רגשות</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/expressions-game.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🎮 משחק זיהוי רגשות 🎮</h1>
+        <div class="score">
+          נקודות: <span id="score">0</span> | שאלה:
+          <span id="questionNum">1</span>/4
+        </div>
+      </div>
+
+      <div id="gameArea" class="game-container">
+        <div class="question" id="questionText"></div>
+        <img id="emotionImage" class="emotion-image" src="" alt="תמונת רגש" />
+        <div class="buttons" id="buttonsArea"></div>
+        <div id="feedback" class="feedback" style="display: none"></div>
+        <button
+          id="nextBtn"
+          class="next-btn"
+          style="display: none"
+          onclick="nextQuestion()"
+        >
+          השאלה הבאה ➡️
+        </button>
+      </div>
+
+      <div id="finalScreen" style="display: none">
+        <div class="final-score">
+          <h2>🎉 סיימת את המשחק! 🎉</h2>
+          <h3>הציון הסופי שלך: <span id="finalScore"></span>/4</h3>
+          <p id="finalMessage"></p>
+          <button class="restart-btn" onclick="restartGame()">
+            שחק שוב 🔄
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
